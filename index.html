@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Simple Calculator</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- <title>Simple Calculator</title> -->
+
+    <link href="https://bainescredit.com/front/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <link href="/front/assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+
+    <link href="https://bainescredit.com/css/ion.rangeSlider.min.css" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"
+        integrity="sha512-6IajJRBwG1E9dZ5mOueZJjTlGmpl4ZFCiufY5I6Pxnr9xMABbxYS8BE22lOPlT3GlDfxSJIyqcP+2D57UFBFFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link href="https://bainescredit.com/css/jquery-radiocharm.css" rel="stylesheet" type="text/css">
+
+    <style>
+        .loan,
+        .loan:hover {
+            display: inline !important;
+            padding: 10px !important;
+            border-radius: 25px !important;
+            color: #fff !important;
+            font-size: 12px;
+        }
+
+        .loan-danger:hover {
+            background-color: #850100 !important;
+        }
+
+        .loan-success:hover {
+            background-color: #38a7cc !important;
+        }
+
+        .contact-bar li a:hover {
+            color: #38a7cc;
+        }
+
+        hr.solid {
+            border-top: 0px solid #bbb;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: rgb(17, 103, 170);
+            font-size: 17px;
+        }
+
+        #compute {
+            /* margin-top: 10px; */
+            background-color: blue;
+            color: white;
+            height: 40px;
+            width: 275px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-section" style="background-color: white;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="header-widget"  >
+                            <ul>
+                                <li style="color: darkblue;"><i class="icofont-clock-time" ></i>Opening Hours: Mon - Fri, 08:00AM - 05:00PM</li>
+                                <!--<li><i class="icofont-location-pin"></i> 22, Norman Williams Street, Ikoyi</li>
+                                <li><i class="icofont-phone"></i> <a href="tel:+2349031111888">+2349031111888</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="header-social text-end">
+                            <ul>
+                                <li><a target="_blank" href="#"><i class="icofont-facebook"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="icofont-twitter"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="icofont-linkedin"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="icofont-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>              
+                </div>
+            </div>
+        </div>
+        
+        <div class="navbar-area">
+            <div class="mobile-nav">
+                <a routerLink="/" class="logo">
+                    <img src="assets/img/BainesCredit2.png" class="img-fluid" alt="logo">
+                </a>
+            </div>
+        
+            <div class="main-nav">
+                <div class="container">
+                    <nav class="navbar navbar-expand-md navbar-light" >
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/img/BainesCredit2.png" class="img-fluid" alt="logo">
+                        </a>
+        
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" style="color:white;">
+                            <ul class="navbar-nav ms-auto" style="color:white;">
+                               
+        
+                                <li class="nav-item"><a routerLink="." class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" style="color:white;">Home</a></li>
+        
+        
+                                
+                                <li class="nav-item"><a routerLink="." class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Payment</a></li>
+                                
+                                <li class="nav-item"><a routerLink="." class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Loans</a></li>
+        
+                                <li class="nav-item"><a routerLink="." class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Contact</a></li>
+                            </ul>
+        
+                            <div class="navbar-button">
+                                <a routerLink=".">Internet Banking</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-lg-12">
+                <img src="assets/img/AccountCreationHeader.png" class="img-fluid" alt="bainescredit"  />
+            </div>
+        </div> -->
+    </header>
+    <section class="service-page-section section-padding">
+        <div class="container">
+            <!-- <div class="grid-item"> -->
+            <div class="row">
+                <div class="col-md-9">
+                    <div id="budget-planner-wrapper" class="single-service-wrapper">
+                        <!-- Expense group -->
+                        <div style="margin-bottom: 50px;">
+                            <form class="budget-form-wrapper" action="https://bainescredit.com/open-account"
+                                style="background-color: rgb(255, 255, 255);">
+                                <div class="row">
+
+                                    <div class="col-md-10 col-md-offset-1 row"">
+                                        <div style=" margin: 20px auto; width: 250px;">
+                                        <input
+                                            style="padding: 14px 41px; box-shadow: 0px 10px 20px rgba(51, 87, 131, 0.35); width: 330px;"
+                                            name="type" value="4.5" data-name="personal"
+                                            class="loan-type personal col-sm-6" checked
+                                            data-radiocharm-background-color="006cfa"
+                                            data-radiocharm-label="Personal Loan" type="radio" />
+                                        <input name="type" value="5" data-name="sme" class="loan-type sme col-sm-6"
+                                            data-radiocharm-label="SME Loan" data-radiocharm-background-color="006cff"
+                                            type="radio" />
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-10 col-md-offset-1 row"
+                                    style="margin-bottom: 40px; text-align: left;">
+                                    <h4
+                                        style="font-weight: 600; font-size: 24px; line-height: 29px; color: rgba(30, 32, 25, 0.85); margin: 60px 0px;">
+                                        How much will you like to take as a loan?</h4>
+                                    <div class="col-sm-3 form-group"
+                                        style="padding-top: 20px; color: rgba(30, 32, 25, 0.85); font-weight: 500; font-size: 16px; margin-right: 70px;">
+                                        <!-- <label style="text-transform: uppercase;">Choose Amount</label> -->
+                                        <!-- <label>Loan Amount</label> -->
+                                        Loan Amount
+                                    </div>
+                                    <div class="col-sm-6 form-group" style="width: 450px;">
+                                        <input type="number" id="amount-holder" value="100000"
+                                            class="searchBar form-control" placeholder="Amount" required>
+                                    </div>
+                                    <div class="col-sm-12 form-group" style="margin-top: 30px;">
+                                        <input type="number" id="amount-slider" name="amount" value="0" />
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-10 col-md-offset-1 row"
+                                    style="margin-bottom: 40px; text-align: left;">
+                                    <br />
+                                    <hr style="margin-bottom: 90px; border-width: 2px;" />
+
+                                    <h4
+                                        style="font-weight: 600; font-size: 24px; line-height: 29px; color: rgba(30, 32, 25, 0.85); margin: 60px 0px;">
+                                        How long will it take you to repay the loan?</h4>
+                                    <div class="col-sm-3 form-group"
+                                        style="padding-top: 20px; color: rgba(30, 32, 25, 0.85); font-weight: 500; font-size: 16px; margin-right: 70px;">
+                                        <!-- <label style="text-transform: uppercase;">Choose Amount</label> -->
+                                        <!-- <label>Loan Duration</label> -->
+                                        Loan Duration
+                                    </div>
+                                    <div class="col-sm-6 form-group" style="width: 450px;">
+                                        <input type="number" id="loan-term" value="1 months"
+                                            class="searchBar form-control" placeholder="1 months" required>
+                                    </div>
+                                    <div class="col-sm-12 form-group" style="margin-top: 30px;">
+                                        <input type="number" id="term-slider" name="term" value="0" />
+                                    </div>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3" style="background: #F7FCFF;">
+                <div>
+                    <div>
+                        <h4
+                            style="margin-top: 60px; margin-bottom: 50px; font-weight: bold; font-size: 24px;color: #383E7E;">
+                            Repayment Summary</h4>
+                        <!-- <hr class="solid"> -->
+                        <div>
+                            <p>Monthly Installment: $</p>
+                            <span style="font-weight: bold; font-size: 32px;color: #31355F; margin: 11px 0px;"
+                                id="amounts">0</span>
+                            <hr class="solid">
+                            <!-- <br /> -->
+                            <hr style="margin-bottom: 40px; margin-top: 10px; border-width: 1px;" />
+                            <!-- <textarea name="" id="amounts" disabled cols="10" rows="1"></textarea> -->
+                            <!-- <input id="amount" type="text" value="" disabled oninput="compute()"> -->
+                            <p>Interest Rate: %</p>
+                            <span style="font-weight: bold; font-size: 32px;color: #31355F; margin: 11px 0px;"
+                                id="interest_rate">14%</span>
+                            <hr class="solid">
+                            <hr style="margin-bottom: 40px; margin-top: 10px; border-width: 1px;" />
+                            <!-- <input id="interest_rate" value="" disabled oninput="compute()"> -->
+                            <p>Total Interest Paid: </p>
+                            <span style="font-weight: bold; font-size: 32px;color: #31355F; margin: 11px 0px;"
+                                id="months">0</span>
+                            <hr class="solid">
+                            <hr style="margin-bottom: 40px; margin-top: 10px; border-width: 1px;" />
+                            <!-- <input id="months" type="number" value="" disabled oninput="compute()"> -->
+                            <p>Total Repayment: </p>
+                            <span style="font-weight: bold; font-size: 32px;color: #31355F; margin: 11px 0px;"
+                                id="payments">0</span>
+                            <!-- <hr class="solid"> -->
+                            <!-- <hr style="margin-bottom: 40px; margin-top: 10px; border-width: 2px;" /> -->
+                            <!-- <input id="payment" value="" disabled oninput="compute()"> -->
+                        </div>
+                        <button
+                            style="margin-top: 70px; background: #3474C5; padding: 14px 20px; align-items: center; justify-content: center; flex-direction: row; display: flex;"
+                            id="compute"><a href="https://bainescredit.pro-ice.com.ng/loan_page2/">Apply For
+                                Loan</a></button> <br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-section">
+            <img src="assets/img/PartnersLogo.png" class="img-fluid" alt="logo">
+        </div>
+        
+        <footer class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <div class="logo">
+                                <a routerLink="/">
+                                    <img src="assets/img/BainesCredit2.png" class="img-fluid" alt="logo">
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><img src="assets/img/apple.png" class="img-fluid" /></div>
+                                <div class="col-md-6"><img src="assets/img/google.png" class="img-fluid" /></div>
+                            </div>
+                            <div class="row" style="margin-top: 20px !important;">
+                                
+                            <div class="footer-socialn">
+                                <a href="#" target="_blank"><i class="icofont-facebook" style="color: white; font-size: x-large;"></i></a> &nbsp;
+                                <a href="#" target="_blank"><i class="icofont-twitter" style="color: white; font-size: x-large;"></i></a>&nbsp;
+                                <a href="#" target="_blank"><i class="icofont-linkedin" style="color: white; font-size: x-large;"></i></a>&nbsp;
+                                <a href="#" target="_blank"><i class="icofont-instagram" style="color: white; font-size: x-large;"></i></a>&nbsp;
+                               <!-- <ul>
+                                    <li><a href="#" target="_blank"><i class="icofont-facebook"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="icofont-twitter"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="icofont-linkedin"></i></a></li>             
+                                    <li><a href="#" target="_blank"><i class="icofont-instagram"></i></a></li>
+                                </ul>-->
+                            </div></div>
+                            <div class="email">
+                                
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget pl-40">
+                            <h3 style="border: none !important;">Services</h3>
+        
+                            <ul>
+                                <li><i class="icofont-simple-right"></i> <a routerLink="#">Internet Banking</a></li>
+                                <li><i class="icofont-simple-right"></i> <a routerLink="#">Fund your Account</a></li>
+                                <li><i class="icofont-simple-right"></i> <a routerLink="#">Access Loans</a></li>
+                                <li><i class="icofont-simple-right"></i> <a routerLink="#">Open an Account</a></li>
+                                <li><i class="icofont-simple-right"></i> <a routerLink="#">Loan Calculator</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget pl-40">
+                            <h3 style="border: none !important;">Quick Links</h3>
+        
+                            <ul>
+                                <li><i class="icofont-simple-right"></i> <a routerLink="/index">Services</a></li>
+                                <li><i class="icofont-simple-right"></i> <a routerLink="/about">About Us</a></li>
+                                <li><i class="icofont-simple-right"></i> <a routerLink="/blog">Contact</a></li>
+                                <li><i class="icofont-simple-right"></i> <a routerLink="/team">Events</a></li>
+                                <li><i class="icofont-simple-right"></i> <a routerLink="/testimonial">Resources</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 style="border: none !important;">Find Us</h3>
+                           
+        
+                            <ul class="find-us">
+                                <li>                                   
+                                    <i class="icofont-location-pin"></i> 22, Norman Williams Street, SouthWest Ikoyi    
+                                </li>
+                                <li>
+                                    <i class="icofont-phone"></i>
+                                    <a href="tel:+880123456789">+2349031111888</a>
+                                </li>
+                                <li>
+                                    <i class="icofont-ui-message"></i>
+                                    <a href="mailto:info@kiaz.com">info@bainescredit.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row  align-items-center">
+                       
+        
+                        <div class="col-lg-12 d-flex justify-content-center">
+                            <div class="copyright-text text-end">
+                                <p>&copy;2022 Baines Credit Microfinance Bank. All Rights Reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="top-btn">
+            <i class="icofont-scroll-long-up"></i>
+        </div>
+    </footer>
+
+
+    <script src="https://bainescredit.com/front/assets/js/jquery.js"></script>
+    <script src="https://bainescredit.com/front/assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="https://drive.google.com/file/d/1Ui2bEeJ6VisyrdK642lV_Q58oRvq9W9J/view?usp=sharing"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"
+        integrity="sha512-WBbdKQKeIQFarq1hrOxNL/gnp0Tqh25fn0z3X1po+ej8iuHhHdp6Sh9l+tghGw5L1bsvtzjeuSKsL80RW3XdYw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <script src="https://drive.google.com/file/d/1CPbz1z94rPM_dE31EhjDpXzsbREMP7sK/view?usp=sharing"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"
+        integrity="sha512-dy8Q+KMsxJmEgLqvZA7kk/Pcaij/OhCK1LPj+oGuxfd/tcbbqrDSGOtiXNfzKbMun+ZBnQsTWUnhuXhVkISDOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+
+
+    <script src="https://bainescredit.com/front/assets/revolution/jquery.themepunch.revolution.min.js"></script>
+    <script src="https://bainescredit.com/front/assets/revolution/jquery.themepunch.tools.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/revslider@5.4.2018/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/revslider@5.4.201-8.6/js/jquery.themepunch.tools.min.js"></script> -->
+
+
+    <!-- <script src="/front/assets/js/script.js"></script> -->
+
+    <script type="text/javascript" src="https://bainescredit.com/js/jquery-radiocharm.js"></script>
+    <script type="text/javascript" src="https://bainescredit.com/js/ion.rangeSlider.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"
+        integrity="sha512-yAFng8in4kzeTPFL8tnOdZGq6yuzw2UiI9HHFrCi1F+ujKsb/+tnssk2TudqZ3m5dzAowdrsTN4xltn5P2qeEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.loan-type').radiocharm();
+        });
+    </script>
+
+    <script type="text/javascript">
+        let term_slider = $("#term-slider");
+        let amount_slider = $("#amount-slider");
+        let amount_holder = $("#amount-holder");
+        let loan_term = $("#loan-term");
+
+        term_slider.ionRangeSlider({
+            skin: 'round',
+            min: 1,
+            max: 12,
+            postfix: ' months'
+        });
+
+        amount_slider.ionRangeSlider({
+            skin: 'round',
+            min: 50000,
+            max: 1000000,
+            prefix: '₦',
+            grid: true,
+            step: 10000,
+            grid_snap: true,
+            decorate_both: true,
+            from_percent: 10,
+            to_percent: 90,
+        });
+
+        calculateLoan(parseInt($('input[name=type]:checked').val()));
+
+        let current_to = 1000000;
+
+        $(document).on('change click keyup', '#term-slider, #loan-term, #amount-slider, #amount-holder, .loan-type', function (e) {
+
+            let interacted = $(this);
+
+            if (interacted.attr('id') === 'amount-holder') {
+                let amount_slider_instance = amount_slider.data("ionRangeSlider");
+                let amount_held = parseInt(interacted.val());
+
+                if (amount_held < 50000) { return; }
+
+                amount_slider_instance.update({
+                    from: parseInt(interacted.val())
+                });
+            }
+
+            if (interacted.attr('id') === 'loan-term') {
+                let term_slider_instance = term_slider.data("ionRangeSlider");
+                let term_held = parseInt(interacted.val());
+
+                if (term_held < 1) { return; }
+
+                term_slider_instance.update({
+                    from: parseInt(interacted.val())
+                });
+            }
+
+            let type_input = $('input[name=type]:checked');
+            let loan_value = parseInt(type_input.val());
+
+            console.log(type_input.hasClass('sme'));
+
+            if (type_input.hasClass('sme') && current_to < 5000000) {
+                let amount_slider_instance = amount_slider.data("ionRangeSlider");
+
+                current_to = 5000000;
+                amount_slider_instance.update({
+                    skin: 'round',
+                    min: 100000,
+                    max: current_to,
+                    prefix: '₦',
+                    grid: true,
+                    step: 10000,
+                    grid_snap: false,
+                    decorate_both: true,
+                    from_percent: 10,
+                    to_percent: 90,
+                });
+            }
+
+            if (type_input.hasClass('personal') && current_to > 1000000) {
+                let amount_slider_instance = amount_slider.data("ionRangeSlider");
+
+                current_to = 1000000;
+                amount_slider_instance.update({
+                    skin: 'round',
+                    min: 50000,
+                    max: current_to,
+                    prefix: '₦',
+                    grid: true,
+                    step: 10000,
+                    grid_snap: true,
+                    decorate_both: true,
+                    from_percent: 10,
+                    to_percent: 90,
+                });
+            }
+
+            amount_holder.val(amount_slider.val());
+            loan_term.val(term_slider.val())
+            // $('#loan-term').html(term_slider.val());
+
+            if (!isNaN(loan_value))
+                calculateLoan(loan_value);
+            else
+                calculateLoan(4.5)
+        });
+
+        function calculateLoan(interest) {
+            // let _total = ((interest / 100 * parseInt(amount_holder.val())) * parseInt(term_slider.val())) + parseInt(amount_holder.val());
+            // let _month = (_total / parseInt(term_slider.val()));
+
+            // $('#monthly-installments').html(_month.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+            // $('#total-repayments').html(_total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+
+            let rate = 20
+            // let interested = (parseInt(amount_holder.val()) * parseInt(term_slider.val()) * rate) / 100
+            let installment = (parseInt(amount_holder.val()) * rate)
+            let amount = (parseInt(amount_holder.val()) * Math.pow(1 + rate / 100, parseInt(term_slider.val())))
+            let ci = amount - parseInt(amount_holder.val())
+            // ci = ci.toFixed(2);
+            let total = parseFloat(parseInt(amount_holder.val())) + parseFloat(ci)
+            // total = total.toFixed(2);
+            let monthly_install = total / parseInt(term_slider.val())
+
+            $('#amounts').html(monthly_install.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+            $('#interest_rate').html(rate);
+            $('#months').html(ci.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+            $('#payments').html(total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+
+        }
+
+    </script>
+
+</body>
+
+</html>
