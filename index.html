@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Simple Calculator</title>
+    <title>Loan Calculator</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -115,7 +115,7 @@
                             <img src="assets/img/BainesCredit2.png" class="img-fluid" alt="logo">
                         </a>
         
-                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" style="color:white;">
+                        <!-- <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" style="color:white;">
                             <ul class="navbar-nav ms-auto" style="color:white;">
                                
         
@@ -133,7 +133,7 @@
                             <div class="navbar-button">
                                 <a routerLink=".">Internet Banking</a>
                             </div>
-                        </div>
+                        </div> -->
                     </nav>
                 </div>
             </div>
@@ -530,7 +530,7 @@
             // $('#monthly-installments').html(_month.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
             // $('#total-repayments').html(_total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
 
-            let rate = 20
+            let rate = 14
             // let interested = (parseInt(amount_holder.val()) * parseInt(term_slider.val()) * rate) / 100
             let installment = (parseInt(amount_holder.val()) * rate)
             let amount = (parseInt(amount_holder.val()) * Math.pow(1 + rate / 100, parseInt(term_slider.val())))
@@ -541,7 +541,7 @@
             let monthly_install = total / parseInt(term_slider.val())
 
             $('#amounts').html(monthly_install.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
-            $('#interest_rate').html(rate);
+            $('#interest_rate').html(`${rate}%`);
             $('#months').html(ci.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
             $('#payments').html(total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
 
